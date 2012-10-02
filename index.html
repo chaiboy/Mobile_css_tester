@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title>Media Tester</title>
+
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+
+<link href="css/init.css" rel="stylesheet" type="text/css" />
+<link href="css/css-global.css" rel="stylesheet" type="text/css" />
+
+
+<link href="css/css-landscape.css" rel="stylesheet" type="text/css"  media="(orientation:landscape)" />
+<link href="css/css-portrait.css" rel="stylesheet" type="text/css" media="(orientation:portrait)" />
+<link href="css/ratio43.css" rel="stylesheet" type="text/css"  media="(device-aspect-ratio: 4/3)" />
+<link href="css/ratio169.css" rel="stylesheet" type="text/css" media="(device-aspect-ratio: 16/9)"  />
+<style>
+
+
+</style>
+
+
+<script>
+
+</script>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/modernizr-2.5.3.js"></script>
+<script type="text/javascript">
+ 	jQuery(function(){
+ 
+ 		jQuery(".contact_me").toggle(
+  			 function()
+			 {
+		 		jQuery('.contact_info').animate({bottom: "20px"}, 250);
+			},
+			function()
+			{
+				jQuery('.contact_info').animate({bottom: "-60px"}, 250);
+			});
+
+
+ 	});	
+
+ </script>
+</head>
+
+<body>
+ <h1>MEDIA DETECTION</h1>
+ <h2 class="desktop">Desktop</h2>
+ <h2 class="ipad">iPad</h2>
+  <h2 class="iphone">iPhone</h2>
+ <h2 class="landscape">This is Landscape Mode</h2>
+ <h2 class="portrait">This is Portrait Mode</h2>
+ <h2  class="iphone_ret_true">iPhone Retina</h2>
+  <h2 class="android_true">iPhone</h2>
+ <!--<div id="yin-yang"></div>
+  <div id="circle"></div>
+
+  <a href="#" id="triangle-left"></a>
+  <a href="#" id="triangle-right"></a>
+<div id="heart"></div>-->
+ <a href="#" class="contact_me">@</a>
+ <div class="contact_info"><a href="tel:1-234-567-8910">1.234.567.8910</a>&nbsp;&nbsp;<a href="http://www.jasonmcalpin.com">jasonmcalpin.com</a></div>
+
+
+</body>
+</html>

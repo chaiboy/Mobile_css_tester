@@ -1,0 +1,94 @@
+
+
+/* =Initialize browser styles default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family:'Varela', sans-serif;
+	font-size: 12px;
+	line-height:100%;
+	font-style:normal;
+	font-weight:normal;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+	
+	/* ie7 fixes */
+	position:relative;
+	z-index:0;
+	
+	
+}
+html,body{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	
+}
+html,body,div{
+/* padding fix to exclude from width and heights ie8+ */
+		 -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		         box-sizing: border-box;
+}
+
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0; 
+	/* ie7 fixes */
+	text-decoration:0;
+}
+
+/* html5 format fixing */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	font-size:24px;
+	font-weight:bold;
+	text-shadow: #b61 0 -1px 0, rgba(255,255,255,.2) 0 1px 0;
+}
+
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+sub { top: 0.4em; }
+
+textarea{resize:none;}
