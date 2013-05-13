@@ -52,7 +52,7 @@ body {
 
 
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+@media screen and (min-width: 768px){
 	body {
 	  color: #FFF;
 	  background-color: #096;
@@ -62,7 +62,7 @@ body {
 	.desktop{display:none;}
 }
 
-@media only screen and (max-device-width: 480px){
+@media screen and (min-width: 480px){
 	html{padding:10px}
 	body {
 		color:#CCC;
@@ -70,24 +70,34 @@ body {
 	}
 	.iphone{display:block;}
 	.desktop{display:none;}
-	h1{font-size:12px}
-	h2{font-size:10px}	
+	h1{font-size:16px}
+	h2{font-size:14px}	
 }
 
 
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
-	.iphone_ret_true{display:block;}
+@media screen and (min-width: 1024px){
+	html{padding:10px}
+	body {
+		color:#CCC;
+		background-color:#f00;
+	}
+	.iphone{display:block;}
+	.desktop{display:none;}
+	h1{font-size:18px}
+	h2{font-size:16px}	
 }
 
-
-@media only screen and (-webkit-min-device-pixel-ratio : 2) and (orientation:landscape), only screen and (min-device-pixel-ratio : 2) and (orientation:landscape) {
-	.iphone_ret_land{display:block;}
+@media screen and (min-width: 1200px){
+	html{padding:10px}
+	body {
+		color:#CCC;
+		background-color:#C01;
+	}
+	.iphone{display:none;}
+	.desktop{display:block;}
+	h1{font-size:20px}
+	h2{font-size:18px}	
 }
-
-@media only screen and (-webkit-min-device-pixel-ratio : 2) and (orientation:portrait), only screen and (min-device-pixel-ratio : 2) and (orientation:portrait) {
-	.iphone_ret_port{display:block;}
-}
-
 
 
 
