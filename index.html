@@ -14,8 +14,8 @@
             $(function() {
                 var browserStats = {
 
-                    getHeight(): function(){return $(window).height()},
-                    getWidth(): function(){return $(window).width()},
+                    getHeight: function(){return $(window).height()},
+                    getWidth: function(){return $(window).width()},
                     
                     display: function(){
                         $('.resizeValues').html ("height: "+browserStats.getHeight()+"<br/>width: "+browserStats.getWidth() );
