@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 <head>
 <meta charset="utf-8">
 <title>Media Tester</title>
@@ -8,60 +8,27 @@
 
 <link href="css/init.css" rel="stylesheet" type="text/css" />
 <link href="css/css-global.css" rel="stylesheet" type="text/css" />
-
-
-
-<style>
-
-
-</style>
-
-
-<script>
-
-</script>
-
-
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/modernizr.js"></script>
-<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
-<script type="text/javascript">
- 	jQuery(function(){
- 
- 		jQuery(".contact_me").toggle(
-  			 function()
-			 {
-		 		jQuery('.contact_info').animate({bottom: "20px"}, 250);
-			},
-			function()
-			{
-				jQuery('.contact_info').animate({bottom: "-60px"}, 250);
-			});
-
-
- 	});	
-
- </script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 </head>
-
 <body>
- <h1>MEDIA QUERIES CALLED</h1>
- <h2 class="desktop">Desktop</h2>
- <h2 class="ipad">iPad</h2>
-  <h2 class="iphone">iPhone</h2>
- <h2 class="landscape">This is Landscape Mode</h2>
- <h2 class="portrait">This is Portrait Mode</h2>
- <h2  class="iphone_ret_true">iPhone Retina</h2>
-  <h2 class="android_true">iPhone</h2>
- <!--<div id="yin-yang"></div>
-  <div id="circle"></div>
-
-  <a href="#" id="triangle-left"></a>
-  <a href="#" id="triangle-right"></a>
-<div id="heart"></div>-->
- <a href="#" class="contact_me">@</a>
- <div class="contact_info"><a href="tel:1-234-567-8910">1.234.567.8910</a>&nbsp;&nbsp;<a href="http://www.jasonmcalpin.com">jasonmcalpin.com</a></div>
-
-
+ <h1>MEDIA DETECTION</h1>
+ <h2 class="desktop">Desktop <span class="retina">retina</span><span class="nonretina">non retina</span> <span class="extreme">extreme layout</span><span class="wide">wide layout</span><span class="full">full layout</span><span class="tablet">tablet layout</span><span class="mobile">mobile layout</span><span class="p1080">1080p</span></h2>
+ <h2 class="laptop">Laptop <span class="retina">retina</span><span class="nonretina">non retina</span> <span class="extreme">extreme layout</span><span class="wide">wide layout</span><span class="full">full layout</span><span class="tablet">tablet layout</span><span class="mobile">mobile layout</span><span class="p1080">1080p</span></h2>
+ <h2 class="ipad">iPad <span class="ipad_1">1</span><span class="ipad_1">1</span><span class="ipad_2">2</span><span class="ipad_3">3</span><span class="ipad_air">air</span> <span class="retina">Retina</span><span class="nonretina">Non retina</span></h2>
+  <h2 class="iphone">iPhone <span class="iphone_4">4</span><span class="iphone_5">5</span><span class="iphone_6">6</span><span class="iphone_6plus">6plus</span> <span class="retina">Retina</span><span class="nonretina">Non retina</span></h2>
+  <h2 class="watch">Apple watch</h2>
+  <h2 class="htc">htc</h2>
+  <h2 class="asus">asus</h2>
+  <h2 class="kindle7">kindle 7</h2>
+  <h2 class="kindle8">kindle 8</h2>
+  <h2 class="s3">s3</h2>
+  <h2 class="s4">s4</h2>
+  <h2 class="s5">s5</h2>
+  
+  <h2 class="galaxyTab">Galaxy Tab 10.1</h2>
+ <h2 class="landscape">Landscape Mode</h2>
+ <h2 class="portrait">Portrait Mode</h2>
+ 
 </body>
 </html>

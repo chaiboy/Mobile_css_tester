@@ -2,7 +2,7 @@
 html {
 	width:100%;
 	height:100%;
-	background-color:#F90;
+	background-color:#666;
 	padding:10px;
 	 /* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
 		 -webkit-box-sizing: border-box;
@@ -10,14 +10,13 @@ html {
 		         box-sizing: border-box;
 	}
 body {
-	
 	padding:20px;
 	 /* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
 		 -webkit-box-sizing: border-box;
 		    -moz-box-sizing: border-box;
 		         box-sizing: border-box;
 
-	border: 4px solid white;
+	border: 1px solid #444;
 		 -webkit-border-radius: 12px;
 		    -moz-border-radius: 12px;
 		         border-radius: 12px;
@@ -25,48 +24,53 @@ body {
 				 
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
-	color: #666;
+	color: #333;
 	
 				 
 				 
 	/* Safari 4 does not support an inset shadow */
-	-webkit-box-shadow:       5px 5px 25px rgba(0,0,0,.5);
+	-webkit-box-shadow:       0 1px 1px rgba(170,170,170,1);
 	/* Chrome 5 does, Safari 4 will ignore this declaration */
-	-webkit-box-shadow: inset 5px 5px 25px rgba(0,0,0,.5);
-	   -moz-box-shadow: inset 5px 5px 25px rgba(0,0,0,.5);
-		    box-shadow: inset 5px 5px 25px rgba(0,0,0,.5);
+	-webkit-box-shadow: inset 0 1px 1px rgba(170,170,170,1);
+	   -moz-box-shadow: inset 0 1px 1px rgba(170,170,170,1);
+		    box-shadow: inset 0 1px 1px rgba(170,170,170,1);
 }
 
  
 
-h2 {display:none;}
+h2,span {display:none;
+    color: #ddd;
+    text-shadow: #333 1px -1px 1px;}
+
+span {font-size: 1em;}
 
 /****** INITIAL STYLES ******/
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	color: #FFF;
-	background-color: #F44;
+	color: #333;
+	background-color: #666;
 }
 .desktop{display:block;}
 
 
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+@media only screen and (min-device-width: 768px) 
+	and (max-device-width: 1024px) {
 	body {
-	  color: #FFF;
-	  background-color: #096;
+	  color: #444;
+	  background-color: #666;
 	}
 	
 	.ipad{display:block;}
 	.desktop{display:none;}
 }
 
-@media only screen and (max-device-width: 480px){
+@media only screen and (max-device-width: 480px) {
 	html{padding:10px}
 	body {
-		color:#CCC;
-		background-color:#C6C;
+		color:#444;
+		background-color:#666;
 	}
 	.iphone{display:block;}
 	.desktop{display:none;}
@@ -75,164 +79,202 @@ body {
 }
 
 
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5) {
 	.iphone_ret_true{display:block;}
 }
 
 
-@media only screen and (-webkit-min-device-pixel-ratio : 2) and (orientation:landscape), only screen and (min-device-pixel-ratio : 2) and (orientation:landscape) {
-	.iphone_ret_land{display:block;}
+@media only screen and (orientation:landscape) {
+	.landscape{display:block;}
 }
-
-@media only screen and (-webkit-min-device-pixel-ratio : 2) and (orientation:portrait), only screen and (min-device-pixel-ratio : 2) and (orientation:portrait) {
-	.iphone_ret_port{display:block;}
+@media only screen and (orientation:portrait) {
+	.portrait{display:block;}
 }
-
-
-
-
-.contact_me{
-	display: block;
-	width:30px;
-	color: #FFF;
-	position: absolute;
-	bottom:20px;
-	font-weight:bold;
-	font-size:24px;
-	text-decoration:none;
-
-
-}
-.contact_info{ 
-
-	width:200px;
-	left:50px;
-	position: absolute;
-	bottom:-60px;
-	
+@media only screen and (min-width: 1281px) and (max-width: 1920px) {
+	.extreme{display:inline;}
+	body{
+		font-size: 24px;
 	}
+}
+@media only screen and (min-width: 961px) and (max-width: 1280px) {
+	.wide{display:inline;}
+	body{
+		font-size: 16px;
+	}
+}
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+	.full{display:inline;}
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+	.tablet{display:inline;}
+}
+@media only screen                        and (max-width: 320px) {
+	.mobile{display:inline;}
+	body{
+		font-size: 10px;
+	}
+}
 
-.contact_info a{
-	color: #FF0;
-	font-size:24px;
-	text-decoration:none;}
-
-
+@media only screen and (-webkit-min-device-pixel-ratio : 2) 
+	and (orientation:portrait), only screen and (min-device-pixel-ratio : 2) 
+	and (orientation:portrait) {
+	.iphone_ret_port{display:inline;}
+}
 
 .show{display:block;}
 .hide{display:none;}
 
-/*
 
-******************  ITEMS *******************
-
-*/
-#yin-yang {
-	width: 96px;
-	height: 48px;
-	background: #eee;
-	border-color: red;
-	border-style: solid;
-	border-width: 2px 2px 50px 2px;
-	border-radius: 48px;
-	position: relative;
-	-moz-box-sizing:content-box;
-	-webkit-box-sizing:content-box;
-	box-sizing:content-box;
+@media only screen 
+ and (max-device-height: 1080px) 
+ and (max-device-width: 1920px)
+ and (-webkit-min-device-pixel-ratio: 2) {
+ 	.p1080{display:inline;}
 }
 
-#yin-yang:before {
-	content: "";
-	position: absolute;
-	top: 24px;
-	left: 0;
-	background: #eee;
-	border: 18px solid red;
-	border-radius: 48px;
-	-moz-border-radius: 48px;
-	-webkit-border-radius:48px;
-	width: 12px;
-	height: 12px;
+/* ----------- iPhone 4 and 4S ----------- */
+@media only screen 
+ and (min-device-width: 320px) 
+ and (max-device-width: 480px)
+ and (-webkit-min-device-pixel-ratio: 2) {
+ 	.iphone_4{display:inline;}
 }
 
-#yin-yang:after {
-	content: "";
-	position: absolute;
-	top: 24px;
-	left: 48px;
-	background: red;
-	border: 18px solid #eee;
-	border-radius:48px;
-	-moz-border-radius: 48px;
-	-webkit-border-radius:48px;
-	width: 12px;
-	height: 12px;
+/* ----------- iPhone 5 and 5S ----------- */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  	.iphone_5{display:inline;}
 }
 
-#circle {
-	width: 100px;
-	height: 100px;
-	background: red;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
+/* ----------- iPhone 6 ----------- */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+	.iphone_6{display:inline;}
 }
 
-#triangle-right {
-	display:block;
-	width: 0;
-	height: 0;
-	border-top: 12px solid transparent;
-	border-bottom: 12px solid transparent;
-	border-left: 24px solid red;
-}
-#triangle-left {
-	display:block;
-	width: 0;
-	height: 0;
-	border-top: 12px solid transparent;
-	border-bottom: 12px solid transparent;
-	border-right: 24px solid red;
-}
-#heart {
-    position: relative;
-    width: 100px;
-    height: 90px;
+
+/* ----------- iPhone 6+ ----------- */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+  	.iphone_6plus{display:inline;}
 }
 
-#heart:before,
-#heart:after {
-    position: absolute;
-    content: "";
-    left: 50px;
-    top: 0;
-    width: 50px;
-    height: 80px;
-    background: red;
-    -moz-border-radius: 50px 50px 0 0;
-    border-radius: 50px 50px 0 0;
-    -webkit-transform: rotate(-45deg);
-       -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-         -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    -webkit-transform-origin: 0 100%;
-       -moz-transform-origin: 0 100%;
-        -ms-transform-origin: 0 100%;
-         -o-transform-origin: 0 100%;
-            transform-origin: 0 100%;
+/* ----------- Galaxy S3 ----------- */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+  	.s3 {display: block;}
 }
 
-#heart:after {
-    left: 0;
-    -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-    -webkit-transform-origin: 100% 100%;
-       -moz-transform-origin: 100% 100%;
-        -ms-transform-origin: 100% 100%;
-         -o-transform-origin: 100% 100%;
-            transform-origin :100% 100%;
-}	
+/* ----------- Galaxy S4 ----------- */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+  	.s4 {display: block;}
+}
+
+/* ----------- Galaxy S5 ----------- */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+  	.s5 {display: block;}
+}
+
+/* ----------- HTC One ----------- */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+  	.htc {display: block;}
+}
+
+/* ----------- iPad mini ----------- */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  	.ipad {display: inline;}
+}
+
+/* ----------- iPad 1 and 2 ----------- */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.ipad {display: inline;}
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  	.ipad {display: inline;}
+  	.retina {display: inline;}
+}
+
+/* ----------- Galaxy Tab 10.1 ----------- */
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px) {
+  	.galaxyTab {display: block;}
+}
+
+/* ----------- Asus Nexus 7 ----------- */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) {
+  	.asus {display: inline;}
+}
+
+/* ----------- Kindle Fire HD 7" ----------- */
+@media only screen 
+  and (min-device-width: 800px) 
+  and (max-device-width: 1280px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+  	.kindle7 {display: inline;}
+}
+
+/* ----------- Kindle Fire HD 8.9" ----------- */
+@media only screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+  	.kindle8 {display: inline;}
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (-webkit-min-device-pixel-ratio: 1) { 
+  	.nonretina {display: inline;}
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+  	.retina {display: inline;}
+}
+
+/* ----------- Apple Watch ----------- */
+@media
+  (max-device-width: 42mm)
+  and (min-device-width: 38mm) { 
+  	.watch {display: block;}
+}
+
+/* ----------- Moto 360 Watch ----------- */
+@media 
+  (max-device-width: 218px)
+  and (max-device-height: 281px) { 
+  	.watch {display: block;}
+}
