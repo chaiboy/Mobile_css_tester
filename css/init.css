@@ -78,10 +78,18 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-h1, h2, h3, h4, h5, h6, p, span{
+h1, h2, h3, h4, h5, h6, span{
 	font-size:2em;
 	font-weight:bold;
 	text-shadow: #AAA 0 1px 1px, rgba(170,170,170,.2) 0 1px 1px;
+}
+
+p{
+	font-size:2em;
+	text-shadow: none;
+    margin: 20px 0 0;
+    color: #ddd;
+    line-height: 1.5em;
 }
 
 sup, sub {
