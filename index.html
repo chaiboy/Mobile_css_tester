@@ -13,10 +13,12 @@
         <script type="text/javascript">
             $(function() {
                 var browserStats = {
-                    width: $(window).width(),
-                    height: $(window).height(),
+
+                    getHeight(): function(){return $(window).height()},
+                    getWidth(): function(){return $(window).width()},
+                    
                     display: function(){
-                        $('div.resize').html ("<p>height: "+browserStats.height+"<br/>width: "+browserStats.width+"</p>" );
+                        $('.resizeValues').html ("height: "+browserStats.getHeight()+"<br/>width: "+browserStats.getWidth() );
                     }
                 }
 
@@ -78,6 +80,6 @@
         <h2 class="galaxyTab">Galaxy Tab 10.1</h2>
         <h2 class="landscape">Landscape mode</h2>
         <h2 class="portrait">Portrait mode</h2>
-        <div class="resize"></div>
+        <div class="resizeValues"></div>
     </body>
 </html>
