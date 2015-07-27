@@ -16,7 +16,7 @@
                     width: $(window).width(),
                     height: $(window).height(),
                     display: function(){
-                        $('body').append ("<p>height: "+browserStats.height+"<br/>width: "+browserStats.width+"</p>" );
+                        $('.resize').html ("<p>height: "+browserStats.height+"<br/>width: "+browserStats.width+"</p>" );
                     }
                 }
 
@@ -78,6 +78,6 @@
         <h2 class="galaxyTab">Galaxy Tab 10.1</h2>
         <h2 class="landscape">Landscape mode</h2>
         <h2 class="portrait">Portrait mode</h2>
-
+        <div class="resize"></div>
     </body>
 </html>
