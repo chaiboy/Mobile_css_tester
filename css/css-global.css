@@ -42,7 +42,9 @@ h2,span {display:none;
     color: #ddd;
     text-shadow: #333 1px -1px 1px;}
 
-.display span{display:inline;}
+.display span{display:inline; color:inherit;text-shadow:none;}
+.display {font-size: 1.5em;
+color:#99ccff;}
 
 span {font-size: 1em;}
 
