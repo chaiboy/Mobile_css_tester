@@ -107,7 +107,7 @@ span {font-size: 1.2em;}
 }
 @media only screen and (orientation:portrait) {
 	.portrait{display:block;}
-	body {font-size: 15px;}
+
 }
 @media only screen and (min-width: 1281px) and (max-width: 1920px) {
 	.extreme{display:inline;}
