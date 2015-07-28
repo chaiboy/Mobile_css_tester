@@ -23,7 +23,6 @@ body {
 				 
 				 
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 10px;
 	color: #262626;
 	
 				 
@@ -39,7 +38,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 	color: #262626;
 	background-color: #666;
-	line-height: 1.2em;
 }
 
  
@@ -57,7 +55,7 @@ h2,span {
 	font-weight: normal;
 }
 .display {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	color:#99ccff;
 	font-weight: bold;
 }
