@@ -107,18 +107,18 @@ span {font-size: 1.2em;}
 }
 @media only screen and (orientation:portrait) {
 	.portrait{display:block;}
-	body {font-size: 20px;}
+	body {font-size: 15px;}
 }
 @media only screen and (min-width: 1281px) and (max-width: 1920px) {
 	.extreme{display:inline;}
 	body{
-		font-size: 2.4em;
+		font-size: 24em;
 	}
 }
 @media only screen and (min-width: 961px) and (max-width: 1280px) {
 	.wide{display:inline;}
 	body{
-		font-size: 1.6em;
+		font-size: 16em;
 	}
 }
 @media only screen and (min-width: 641px) and (max-width: 960px) {
@@ -130,7 +130,7 @@ span {font-size: 1.2em;}
 @media only screen                        and (max-width: 320px) {
 	.mobile{display:inline;}
 	body{
-		font-size: 1em;
+		font-size: 10px;
 	}
 }
 
@@ -239,6 +239,7 @@ span {font-size: 1.2em;}
   and (-webkit-min-device-pixel-ratio: 2) {
   	.ipad {display: inline;}
   	.retina {display: inline;}
+  	body{font-size: 20px;}
 }
 
 /* ----------- Galaxy Tab 10.1 ----------- */
