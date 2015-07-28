@@ -112,13 +112,13 @@ span {font-size: 1.2em;}
 @media only screen and (min-width: 1281px) and (max-width: 1920px) {
 	.extreme{display:inline;}
 	body{
-		font-size: 24em;
+		font-size: 24px;
 	}
 }
 @media only screen and (min-width: 961px) and (max-width: 1280px) {
 	.wide{display:inline;}
 	body{
-		font-size: 16em;
+		font-size: 16px;
 	}
 }
 @media only screen and (min-width: 641px) and (max-width: 960px) {
