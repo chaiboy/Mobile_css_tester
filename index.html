@@ -17,6 +17,11 @@
                 }
             }
             $(function() {
+
+
+
+
+
                 var browserStats = {
                     getPixelRatio: function (){      
                                                      var pixelaspect = 1;
@@ -73,6 +78,9 @@
                                                     trace("display rendered");
                                                     }
                 }
+
+                jQuery(document).mouseleave(function(){browserStats.display();});
+                jQuery(document).mouseenter(function(){browserStats.display();});
 
                 $( window ).on('load resize',function() {
                       browserStats.display();
