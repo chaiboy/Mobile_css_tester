@@ -11,9 +11,9 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
         <script type="text/javascript">
-            function trace(messageString){ if (console())
+            function trace(getMessage){ if (console())
                 {
-                    console.log(messageString);
+                    console.log(getMessage);
                 }
             }
             $(function() {
@@ -25,7 +25,7 @@
                     getWindowWidth: function(){return $(window).width()},
                     getDocumentHeight: function(){return $(document).height()},
                     getDocumentWidth: function(){return $(document).width()},
-                    display: function(){
+                    display: function() {
                         trace("display called";)
                         // $('.scrhi').html (browserStats.getScreenHeight());
                         // $('.scrwi').html (browserStats.getScreenWidth());
@@ -38,7 +38,6 @@
                 }
 
                 $( window ).on('load resize',function() {
-
                       browserStats.display();
                 });
             });
