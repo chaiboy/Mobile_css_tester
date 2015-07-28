@@ -23,7 +23,7 @@ body {
 				 
 				 
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 12px;
+	font-size: 10px;
 	color: #262626;
 	
 				 
@@ -52,7 +52,7 @@ h2,span {display:none;
 .display {font-size: 1.5em;
 color:#99ccff;}
 
-span {font-size: 1em;}
+span {font-size: 1.2em;}
 
 /****** INITIAL STYLES ******/
 
@@ -83,11 +83,11 @@ body {
 	.iphone{display:block;}
 	.desktop{display:none;}
 	h1{
-		font-size:22px; 
+		font-size:2.2em; 
 		color: #262626;
 	}
-	h2{font-size:18px}	
-	.display{font-size:18px}	
+	h2{font-size:1.8em}	
+	.display{font-size:1.8em}	
 }
 
 
@@ -105,13 +105,13 @@ body {
 @media only screen and (min-width: 1281px) and (max-width: 1920px) {
 	.extreme{display:inline;}
 	body{
-		font-size: 24px;
+		font-size: 2.4em;
 	}
 }
 @media only screen and (min-width: 961px) and (max-width: 1280px) {
 	.wide{display:inline;}
 	body{
-		font-size: 16px;
+		font-size: 1.6em;
 	}
 }
 @media only screen and (min-width: 641px) and (max-width: 960px) {
@@ -123,7 +123,7 @@ body {
 @media only screen                        and (max-width: 320px) {
 	.mobile{display:inline;}
 	body{
-		font-size: 10px;
+		font-size: 1em;
 	}
 }
 
