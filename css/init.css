@@ -46,7 +46,8 @@ html,body,div{
 }
 
 body {
-	line-height: 1;
+	line-height: 1.2em;
+	font-size: 10px;
 }
 ol, ul {
 	list-style: none;
@@ -79,15 +80,15 @@ footer, header, hgroup, menu, nav, section {
 }
 
 h1, h2, h3, h4, h5, h6, span{
-	font-size:2em;
+	font-size: 1.5em;
 	font-weight:bold;
 	text-shadow: #AAA 0 1px 1px, rgba(170,170,170,.2) 0 1px 1px;
 }
 
 p{
-	font-size:2em;
+
 	text-shadow: none;
-    margin: 20px 0 0;
+    margin: 1em 0 0;
     color: #ddd;
     line-height: 1.5em;
 }
