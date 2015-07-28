@@ -11,6 +11,11 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
         <script type="text/javascript">
+            function trace(messageString){ if (console())
+                {
+                    console.log(messageString);
+                }
+            }
             $(function() {
                 var browserStats = {
 
@@ -31,6 +36,7 @@
                 }
 
                 $( window ).on('load resize',function() {
+
                       browserStats.display();
                 });
             });
