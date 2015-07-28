@@ -19,16 +19,16 @@
             $(function() {
                 var browserStats = {
 
-                    // getScreenHeight: function(){return $(screen).height()},
-                    // getScreenWidth: function(){return $(screen).width()},
+                    getScreenHeight: function(){return $(screen).height()},
+                    getScreenWidth: function(){return $(screen).width()},
                     getWindowHeight: function(){return $(window).height()},
                     getWindowWidth: function(){return $(window).width()},
                     getDocumentHeight: function(){return $(document).height()},
                     getDocumentWidth: function(){return $(document).width()},
                     display: function() {
                         trace("display called");
-                        // $('.scrhi').html (browserStats.getScreenHeight());
-                        // $('.scrwi').html (browserStats.getScreenWidth());
+                        $('.scrhi').html (browserStats.getScreenHeight());
+                        $('.scrwi').html (browserStats.getScreenWidth());
                         trace (browserStats.getWindowHeight());
                         $('.winhi').html (browserStats.getWindowHeight());
                         $('.winwi').html (browserStats.getWindowWidth());
