@@ -49,7 +49,12 @@ h2,span {
     color: #ddd;
     text-shadow: #333 1px -1px 1px;}
 
-.display span{display:inline; color:inherit;text-shadow:none;}
+.display span{
+	display:inline; 
+	color:inherit;
+	text-shadow:none;
+	font-size: inherit;
+}
 .display {
 	font-size: 1.5em;
 	color:#99ccff;
