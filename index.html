@@ -26,8 +26,10 @@
                     getDocumentHeight: function(){return $(document).height()},
                     getDocumentWidth: function(){return $(document).width()},
                     display: function(){
+                        trace("display called";)
                         // $('.scrhi').html (browserStats.getScreenHeight());
                         // $('.scrwi').html (browserStats.getScreenWidth());
+                        trace (browserStats.getWindowHeight());
                         $('.winhi').html (browserStats.getWindowHeight());
                         $('.winwi').html (browserStats.getWindowWidth());
                         $('.dochi').html (browserStats.getDocumentHeight());
