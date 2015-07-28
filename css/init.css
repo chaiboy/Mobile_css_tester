@@ -80,13 +80,14 @@ footer, header, hgroup, menu, nav, section {
 }
 
 h1, h2, h3, h4, h5, h6, span{
-	font-size: 1.5em;
 	font-weight:bold;
 	text-shadow: #AAA 0 1px 1px, rgba(170,170,170,.2) 0 1px 1px;
 }
+h1, h2, h3, h4, h5, h6{
+	font-size: 1.5em;
+}
 
 p{
-
 	text-shadow: none;
     margin: 0.5em 0 0;
     color: #ddd;
