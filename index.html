@@ -26,7 +26,10 @@
                                                      trace("pixelaspect: "+pixelaspect)
                                                      return pixelaspect;
                                                      },
-                    getScreenHeight: function(){     return screen.height },
+                    getUserAgent: function(){        return navigator.userAgent; },
+                    getAppVersion: function(){       return navigator.appVersion; },
+                    getVendor: function(){           return navigator.vendor;}
+                    getScreenHeight: function(){     return screen.height;},
                     getScreenWidth: function(){      return screen.width },
                     getWindowHeight: function(){     return $(window).height() },
                     getWindowWidth: function(){      return $(window).width() },
@@ -63,6 +66,10 @@
                                                         $('.dochipix').html ("");
                                                         $('.docwipix').html ("");
                                                     }
+
+                                                    $('.version').html (browserStats.getAppVersion());
+                                                    $('.vendor').html (browserStats.getDVendor());
+                                                    $('.agent').html (browserStats.getUserAgent());
                                                     trace("display rendered");
                                                     }
                 }
@@ -123,6 +130,8 @@
         <h2 class="galaxyTab">Galaxy Tab 10.1</h2>
         <h2 class="landscape">Landscape mode</h2>
         <h2 class="portrait">Portrait mode</h2>
+        <p class="display">UserAgent: <span class="agent"></span></p>
+        <p class="display">Vendor: <span class="vendor"></span>, Version: <span class="version"></span></p>
         <p class="display">Pixel ratio: <span class="pixel"></span></p>
         <p class="display">screen height: <span class="scrhi"></span><span class="scrhipix"></span>, width: <span class="scrwi"></span><span class="scrwipix"></span></p>
         <p class="display">window height: <span class="winhi"></span><span class="winhipix"></span>, width: <span class="winwi"></span><span class="winwipix"></span></p>
