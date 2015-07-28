@@ -14,17 +14,23 @@
             $(function() {
                 var browserStats = {
 
-                    getHeight: function(){return $(window).height()},
-                    getWidth: function(){return $(window).width()},
-                    
+                    getScreenHeight: function(){return $(screen).height()},
+                    getScreenWidth: function(){return $(screen).width()},
+                    getWindowHeight: function(){return $(window).height()},
+                    getWindowWidth: function(){return $(window).width()},
+                    getDocumentHeight: function(){return $(document).height()},
+                    getDocumentWidth: function(){return $(document).width()},
                     display: function(){
-                        $('.resizeValues').html ("height: "+browserStats.getHeight()+"<br/>width: "+browserStats.getWidth() );
+                        $('.scrhi').html (browserStats.getScreenHeight());
+                        $('.scrwi').html (browserStats.getScreenWidth());
+                        $('.winhi').html (browserStats.getWindowHeight());
+                        $('.winwi').html (browserStats.getWindowWidth());
+                        $('.docwi').html (browserStats.getDocumentHeight());
+                        $('.docwi').html (browserStats.getDocumentWidth());
                     }
                 }
 
-                browserStats.display();
-
-                $( window ).resize(function() {
+                $( window ).on('load resize',function() {
                       browserStats.display();
                 });
             });
@@ -80,6 +86,8 @@
         <h2 class="galaxyTab">Galaxy Tab 10.1</h2>
         <h2 class="landscape">Landscape mode</h2>
         <h2 class="portrait">Portrait mode</h2>
-        <p class="resizeValues"></p>
+        <p class="resizeScreenValues">screen height: <span class="scrhi"></span>, width: <span class="scrwi"></span></p>
+        <p class="resizeWindowValues">window height: <span class="winhi"></span>, width: <span class="winwi"></span></p>
+        <p class="resizeDocumentValues">document height: <span class="dochi"></span>, width: <span class="docwi"></span></p>
     </body>
 </html>
