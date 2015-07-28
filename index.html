@@ -28,7 +28,7 @@
                                                      },
                     getUserAgent: function(){        return navigator.userAgent; },
                     getAppVersion: function(){       return navigator.appVersion; },
-                    getVendor: function(){           return navigator.vendor;}
+                    getVendor: function(){           return navigator.vendor;},
                     getScreenHeight: function(){     return screen.height;},
                     getScreenWidth: function(){      return screen.width },
                     getWindowHeight: function(){     return $(window).height() },
@@ -68,7 +68,7 @@
                                                     }
 
                                                     $('.version').html (browserStats.getAppVersion());
-                                                    $('.vendor').html (browserStats.getDVendor());
+                                                    $('.vendor').html (browserStats.getVendor());
                                                     $('.agent').html (browserStats.getUserAgent());
                                                     trace("display rendered");
                                                     }
