@@ -230,6 +230,8 @@ span {font-size: inherit;}
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
 	.ipad {display: inline;}
+	.ipad_1 {display: inline;}
+	.ipad_2 {display: inline;}
 }
 
 /* ----------- iPad 3 and 4 ----------- */
@@ -239,6 +241,7 @@ span {font-size: inherit;}
   and (-webkit-min-device-pixel-ratio: 2) {
   	.ipad {display: inline;}
   	.retina {display: inline;}
+  	.ipad_3 {display: inline;}
   	body{font-size: 20px;}
 }
 
