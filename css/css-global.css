@@ -60,7 +60,7 @@ h2,span {
 	font-weight: bold;
 }
 
-
+span {font-size: inherit;}
 
 /****** INITIAL STYLES ******/
 
