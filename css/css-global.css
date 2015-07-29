@@ -147,7 +147,7 @@ span {font-size: 1.2em;}
 @media only screen 
  and (max-device-height: 1080px) 
  and (max-device-width: 1920px)
- and (-webkit-min-device-pixel-ratio: 2) {
+ and (-webkit-device-pixel-ratio: 1) {
  	.p1080{display:inline;}
 }
 
@@ -155,7 +155,7 @@ span {font-size: 1.2em;}
 @media only screen 
  and (min-device-width: 320px) 
  and (max-device-width: 480px)
- and (-webkit-min-device-pixel-ratio: 2) {
+ and (-webkit-device-pixel-ratio: 2) {
  	.iphone_4{display:inline;}
 }
 
@@ -163,7 +163,7 @@ span {font-size: 1.2em;}
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (-webkit-device-pixel-ratio: 2) {
   	.iphone_5{display:inline;}
 }
 
@@ -171,7 +171,7 @@ span {font-size: 1.2em;}
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
+  and (-webkit-device-pixel-ratio: 2) { 
 	.iphone_6{display:inline;}
 }
 
@@ -180,7 +180,7 @@ span {font-size: 1.2em;}
 @media only screen 
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+  and (-webkit-device-pixel-ratio: 3) { 
   	.iphone_6plus{display:inline;}
 }
 
@@ -253,8 +253,7 @@ span {font-size: 1.2em;}
 @media screen 
   and (device-width: 601px) 
   and (device-height: 906px) 
-  and (-webkit-min-device-pixel-ratio: 1.331) 
-  and (-webkit-max-device-pixel-ratio: 1.332) {
+  and (-webkit-device-pixel-ratio: 1.331) {
   	.asus {display: inline;}
 }
 
@@ -262,7 +261,7 @@ span {font-size: 1.2em;}
 @media only screen 
   and (min-device-width: 800px) 
   and (max-device-width: 1280px) 
-  and (-webkit-min-device-pixel-ratio: 1.5) {
+  and (-webkit-device-pixel-ratio: 1.5) {
   	.kindle7 {display: inline;}
 }
 
@@ -270,7 +269,7 @@ span {font-size: 1.2em;}
 @media only screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1.5) {
+  and (-webkit-device-pixel-ratio: 1.5) {
   	.kindle8 {display: inline;}
 }
 
