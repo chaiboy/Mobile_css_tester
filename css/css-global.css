@@ -49,14 +49,14 @@ h2,span {
 
 .display span{
 	display:inline; 
-	color:inherit;
+	color:##99ccff;
 	text-shadow:none;
 	font-size: inherit;
 	font-weight: normal;
 }
 .display {
 	font-size: 1.2em;
-	color:#99ccff;
+	color:#fff;
 	font-weight: bold;
 }
 
