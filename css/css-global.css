@@ -20,13 +20,13 @@ body {
 		 -webkit-border-radius: 12px;
 		    -moz-border-radius: 12px;
 		         border-radius: 12px;
-				 
-				 
+
+
 	font-family: Verdana, Geneva, sans-serif;
 	color: #262626;
-	
-				 
-				 
+
+
+
 	/* Safari 4 does not support an inset shadow */
 	-webkit-box-shadow:       0 1px 1px rgba(170,170,170,1);
 	/* Chrome 5 does, Safari 4 will ignore this declaration */
@@ -40,7 +40,7 @@ body {
 	background-color: #666;
 }
 
- 
+
 
 h2,span {
 	display:none;
@@ -48,7 +48,7 @@ h2,span {
     text-shadow: #333 1px -1px 1px;}
 
 .display span{
-	display:inline; 
+	display:inline;
 	color:#99ccff;
 	text-shadow:none;
 	font-size: inherit;
@@ -69,13 +69,13 @@ span {font-size: inherit;}
 
 
 
-@media only screen and (min-device-width: 768px) 
+@media only screen and (min-device-width: 768px)
 	and (max-device-width: 1024px) {
 	body {
 	  color: #444;
 	  background-color: #666;
 	}
-	
+
 	.ipad{display:block;}
 	.desktop{display:none;}
 }
@@ -89,11 +89,11 @@ span {font-size: inherit;}
 	.iphone{display:block;}
 	.desktop{display:none;}
 	h1{
-		font-size:2.2em; 
+		font-size:2.2em;
 		color: #262626;
 	}
-	h2{font-size:1.8em}	
-	.display{font-size:1.8em}	
+	h2{font-size:1.8em}
+	.display{font-size:1.8em}
 }
 
 
@@ -134,8 +134,8 @@ span {font-size: inherit;}
 	}
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio : 2) 
-	and (orientation:portrait), only screen and (min-device-pixel-ratio : 2) 
+@media only screen and (-webkit-min-device-pixel-ratio : 2)
+	and (orientation:portrait), only screen and (min-device-pixel-ratio : 2)
 	and (orientation:portrait) {
 	.iphone_ret_port{display:inline;}
 }
@@ -144,90 +144,90 @@ span {font-size: inherit;}
 .hide{display:none;}
 
 
-@media only screen 
- and (max-device-height: 1080px) 
+@media only screen
+ and (max-device-height: 1080px)
  and (max-device-width: 1920px)
  and (-webkit-device-pixel-ratio: 1) {
  	.p1080{display:inline;}
 }
 
 /* ----------- iPhone 4 and 4S ----------- */
-@media only screen 
- and (min-device-width: 320px) 
+@media only screen
+ and (min-device-width: 320px)
  and (max-device-width: 480px)
  and (-webkit-device-pixel-ratio: 2) {
  	.iphone_4{display:inline;}
 }
 
 /* ----------- iPhone 5 and 5S ----------- */
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-device-pixel-ratio: 2) {
   	.iphone_5{display:inline;}
 }
 
 /* ----------- iPhone 6 ----------- */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-device-pixel-ratio: 2) { 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-device-pixel-ratio: 2) {
 	.iphone_6{display:inline;}
 }
 
 
 /* ----------- iPhone 6+ ----------- */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-device-pixel-ratio: 3) { 
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-device-pixel-ratio: 3) {
   	.iphone_6plus{display:inline;}
 }
 
 /* ----------- Galaxy S3 ----------- */
-@media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 2) {
   	.s3 {display: block;}
 }
 
 /* ----------- Galaxy S4 ----------- */
-@media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 3) {
   	.s4 {display: block;}
 }
 
 /* ----------- Galaxy S5 ----------- */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 3) {
   	.s5 {display: block;}
 }
 
 /* ----------- HTC One ----------- */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 3) {
   	.htc {display: block;}
 }
 
 /* ----------- iPad mini ----------- */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 1) {
   	.ipad {display: inline;}
 }
 
 /* ----------- iPad 1 and 2 ----------- */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
   and (-webkit-device-pixel-ratio: 1) {
 	.ipad {display: inline;}
 	.ipad_1 {display: inline;}
@@ -235,9 +235,9 @@ span {font-size: inherit;}
 }
 
 /* ----------- iPad 3 and 4 ----------- */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
   and (-webkit-device-pixel-ratio: 2) {
   	.ipad {display: inline;}
   	.retina {display: inline;}
@@ -246,58 +246,58 @@ span {font-size: inherit;}
 }
 
 /* ----------- Galaxy Tab 10.1 ----------- */
-@media 
-  (min-device-width: 800px) 
+@media
+  (min-device-width: 800px)
   and (max-device-width: 1280px) {
   	.galaxyTab {display: block;}
 }
 
 /* ----------- Asus Nexus 7 ----------- */
-@media screen 
-  and (device-width: 601px) 
-  and (device-height: 906px) 
+@media screen
+  and (device-width: 601px)
+  and (device-height: 906px)
   and (-webkit-device-pixel-ratio: 1.331) {
   	.asus {display: inline;}
 }
 
 /* ----------- Kindle Fire HD 7" ----------- */
-@media only screen 
-  and (min-device-width: 800px) 
-  and (max-device-width: 1280px) 
+@media only screen
+  and (min-device-width: 800px)
+  and (max-device-width: 1280px)
   and (-webkit-device-pixel-ratio: 1.5) {
   	.kindle7 {display: inline;}
 }
 
 /* ----------- Kindle Fire HD 8.9" ----------- */
-@media only screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
+@media only screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
   and (-webkit-device-pixel-ratio: 1.5) {
   	.kindle8 {display: inline;}
 }
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen and (-webkit-min-device-pixel-ratio: 1)
-   and (-webkit-max-device-pixel-ratio: 1.5) { 
+   and (-webkit-max-device-pixel-ratio: 1.5) {
   	.nonretina {display: inline;}
 }
 
 /* ----------- Retina Screens ----------- */
 @media screen and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
+  and (min-resolution: 192dpi) {
   	.retina {display: inline;}
 }
 
 /* ----------- Apple Watch ----------- */
 @media
   (max-device-width: 42mm)
-  and (min-device-width: 38mm) { 
+  and (min-device-width: 38mm) {
   	.watch {display: block;}
 }
 
 /* ----------- Moto 360 Watch ----------- */
-@media 
+@media
   (max-device-width: 218px)
-  and (max-device-height: 281px) { 
+  and (max-device-height: 281px) {
   	.watch {display: block;}
 }

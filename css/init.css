@@ -46,6 +46,7 @@ html,body,div{
 }
 
 body {
+  transition:font-size 0.5s ease,line-height 0.5s ease;
     line-height: 1.2em;
     font-size: 10px;
 }
@@ -76,15 +77,15 @@ a img {
 /* html5 format fixing */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-    display: block;
+  display: block;
 }
 
 h1, h2, h3, h4, h5, h6, span{
-    font-weight:bold;
-    text-shadow: #AAA 0 1px 1px, rgba(170,170,170,.2) 0 1px 1px;
+  font-weight:bold;
+  text-shadow: #AAA 0 1px 1px, rgba(170,170,170,.2) 0 1px 1px;
 }
 h1, h2, h3, h4, h5, h6{
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 p{
