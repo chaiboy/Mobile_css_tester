@@ -105,7 +105,7 @@ jQuery(function () {
   });
 
   jQuery(window).on('load', function () {
-    var modernzr_classes = jQuery('body').attr("class");
+    var modernzr_classes = jQuery('html').attr("class");
     jQuery('.modernzr_classes_list').html(modernzr_classes);
   });
 
