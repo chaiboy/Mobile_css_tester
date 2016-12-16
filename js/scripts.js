@@ -1,6 +1,6 @@
 // js
 /*global
-jQuery, console, $, screen
+jQuery, console, jQuery, screen
 */
 function trace (getMessage) {
   'use strict';
@@ -9,7 +9,7 @@ function trace (getMessage) {
   }
 }
 
-$(function () {
+jQuery(function () {
   'use strict';
   var browserStats = {
     getPixelRatio: function () {
@@ -40,54 +40,54 @@ $(function () {
       return screen.width;
     },
     getWindowHeight: function () {
-      return $(window).height();
+      return jQuery(window).height();
     },
     getWindowWidth: function () {
-      return $(window).width();
+      return jQuery(window).width();
     },
     getDocumentHeight: function () {
-      return $(document).height();
+      return jQuery(document).height();
     },
     getDocumentWidth: function () {
-      return $(document).width();
+      return jQuery(document).width();
     },
     getActualDimensions: function (dimension, ratio) {
       return dimension * ratio;
     },
     display: function () {
       trace('display called' + browserStats.getPixelRatio);
-      $('.pixel').html(browserStats.getPixelRatio);
-      $('.scrhi').html(browserStats.getScreenHeight());
-      $('.scrwi').html(browserStats.getScreenWidth());
+      jQuery('.pixel').html(browserStats.getPixelRatio);
+      jQuery('.scrhi').html(browserStats.getScreenHeight());
+      jQuery('.scrwi').html(browserStats.getScreenWidth());
       if (browserStats.getPixelRatio() > 1) {
-        $('.scrhipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getScreenHeight(), browserStats.getPixelRatio()) + ')');
-        $('.scrwipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getScreenWidth(), browserStats.getPixelRatio()) + ')');
+        jQuery('.scrhipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getScreenHeight(), browserStats.getPixelRatio()) + ')');
+        jQuery('.scrwipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getScreenWidth(), browserStats.getPixelRatio()) + ')');
       } else {
-        $('.scrhipix').html('');
-        $('.scrwipix').html('');
+        jQuery('.scrhipix').html('');
+        jQuery('.scrwipix').html('');
       }
-      $('.winhi').html(browserStats.getWindowHeight());
-      $('.winwi').html(browserStats.getWindowWidth());
+      jQuery('.winhi').html(browserStats.getWindowHeight());
+      jQuery('.winwi').html(browserStats.getWindowWidth());
       if (browserStats.getPixelRatio() > 1) {
-        $('.winhipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getWindowHeight(), browserStats.getPixelRatio()) + ')');
-        $('.winwipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getWindowWidth(), browserStats.getPixelRatio()) + ')');
+        jQuery('.winhipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getWindowHeight(), browserStats.getPixelRatio()) + ')');
+        jQuery('.winwipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getWindowWidth(), browserStats.getPixelRatio()) + ')');
       } else {
-        $('.winhipix').html('');
-        $('.winwipix').html('');
+        jQuery('.winhipix').html('');
+        jQuery('.winwipix').html('');
       }
-      $('.dochi').html(browserStats.getDocumentHeight());
-      $('.docwi').html(browserStats.getDocumentWidth());
+      jQuery('.dochi').html(browserStats.getDocumentHeight());
+      jQuery('.docwi').html(browserStats.getDocumentWidth());
       if (browserStats.getPixelRatio() > 1) {
-        $('.dochipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getDocumentHeight(), browserStats.getPixelRatio()) + ')');
-        $('.docwipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getDocumentWidth(), browserStats.getPixelRatio()) + ')');
+        jQuery('.dochipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getDocumentHeight(), browserStats.getPixelRatio()) + ')');
+        jQuery('.docwipix').html(' (Actual: ' + browserStats.getActualDimensions(browserStats.getDocumentWidth(), browserStats.getPixelRatio()) + ')');
       } else {
-        $('.dochipix').html('');
-        $('.docwipix').html('');
+        jQuery('.dochipix').html('');
+        jQuery('.docwipix').html('');
       }
 
-      $('.version').html(browserStats.getAppVersion());
-      $('.vendor').html(browserStats.getVendor());
-      $('.agent').html(browserStats.getUserAgent());
+      jQuery('.version').html(browserStats.getAppVersion());
+      jQuery('.vendor').html(browserStats.getVendor());
+      jQuery('.agent').html(browserStats.getUserAgent());
       trace('display rendered');
     }
   };
@@ -95,11 +95,18 @@ $(function () {
   jQuery(document).mouseleave(function () {
     browserStats.display();
   });
+
   jQuery(document).mouseenter(function () {
     browserStats.display();
   });
 
-  $(window).on('load resize', function () {
+  jQuery(window).on('load resize', function () {
     browserStats.display();
   });
+
+  jQuery(window).on('load', function () {
+    var modernzr_classes = jQuery('body').attr("class");
+    jQuery('.modernzr_classes_list').html(modernzr_classes);
+  });
+
 });
