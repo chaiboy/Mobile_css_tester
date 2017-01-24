@@ -41,7 +41,11 @@ body {
 	background-color: #666;
 }
 
-
+body.body_errors {
+	justify-content: center;
+    display: flex;
+    align-items: center;
+}
 
 h2,span {
 	display:none;
