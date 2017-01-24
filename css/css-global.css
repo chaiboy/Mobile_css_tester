@@ -10,6 +10,7 @@ html {
 		         box-sizing: border-box;
 	}
 body {
+	overflow-y: auto;
 	padding:20px;
 	 /* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
 		 -webkit-box-sizing: border-box;
@@ -45,7 +46,8 @@ body {
 h2,span {
 	display:none;
     color: #ddd;
-    text-shadow: #333 1px -1px 1px;}
+    text-shadow: #333 1px -1px 1px;
+}
 
 .display span{
 	display:inline;
