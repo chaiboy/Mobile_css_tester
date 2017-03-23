@@ -55,8 +55,9 @@ jQuery(function () {
       return dimension * ratio;
     },
     display: function () {
-      trace('display called' + browserStats.getPixelRatio);
-      jQuery('.pixel').html(browserStats.getPixelRatio);
+      trace('display called' + browserStats.getPixelRatio());
+
+      jQuery('.pixel').html(browserStats.getPixelRatio());
       jQuery('.scrhi').html(browserStats.getScreenHeight());
       jQuery('.scrwi').html(browserStats.getScreenWidth());
       if (browserStats.getPixelRatio() > 1) {
