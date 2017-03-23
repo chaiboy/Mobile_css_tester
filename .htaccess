@@ -8,7 +8,7 @@ RewriteRule ^(.*)$ https://www.chaiboy.com/$1 [R,L]
 <ifModule mod_headers.c>
 
 	# prevent code from running from the page. Setting which sites can run code on this site.
-	Header set Content-Security-Policy " 'unsafe-eval' default-src 'self' script-src 'self' code.jquery.com www.google-analytics.com *.cloudflare.com *.hotjar.com ajax.googleapis.com ajax.aspnetcdn.com;"
+	Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: code.jquery.com www.google-analytics.com *.cloudflare.com *.hotjar.com;"
 
 	# make sure browser is only talking to site through https.
 	Header set Strict-Transport-Security "max-age=631138519; includeSubDomains"
