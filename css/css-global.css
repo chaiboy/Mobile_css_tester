@@ -307,3 +307,22 @@ span {font-size: inherit;}
   and (max-device-height: 281px) {
   	.watch {display: block;}
 }
+
+
+.mousepointer {
+  height:0;
+  width:0;
+  position: absolute;
+  top:0px;
+  left:0px;
+  z-index: 1;
+
+}
+.mousex, .mousey {
+  display: block;
+  width: auto;
+  white-space: nowrap;
+  color: #ffcc00;
+  font-weight: normal;
+  font-size: .75em;
+}

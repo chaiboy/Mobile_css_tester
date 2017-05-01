@@ -93,6 +93,26 @@ jQuery(function () {
     }
   };
 
+document.addEventListener('mousemove', mousepointer, false);
+document.addEventListener('touchmove', mousepointer, false);
+  // document.onmousemove = mousepointer;
+
+  function mousepointer (event){
+    var pageX, pageY, mouse_position;
+
+        event = event || window.event; // IE-ism
+
+        mouse_position = {
+            x: event.pageX,
+            y: event.pageY
+        };
+
+        jQuery('.mousepointer').css('top', mouse_position.y + 'px');
+        jQuery('.mousepointer').css('left', mouse_position.x + 'px');
+        jQuery('.mousey').text('top (y): position: '+ mouse_position.y + 'px');
+        jQuery('.mousex').text('left (x): position: '+ mouse_position.x + 'px');
+  }
+
   jQuery(document).mouseleave(function () {
     browserStats.display();
   });
