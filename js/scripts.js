@@ -103,8 +103,8 @@ jQuery(function () {
         event = event || window.event; // IE-ism
 
         mouse_position = {
-            x: event.pageX,
-            y: event.pageY
+            x: event.pageX + 20,
+            y: event.pageY - 20
         };
 
         jQuery('.mousepointer').css('top', mouse_position.y + 'px');
