@@ -1,0 +1,28 @@
+/**
+ *
+ * How to make a img act like a background-size: cover
+ * 
+*/
+
+img.photo {
+    width: 100%;
+    height: 200px;
+    background: url(../images/Kohei314_forest_image.jpg) center center no-repeat;
+    background-size: cover;
+    display:block;
+}
+div.photo-frame {
+    height: 200px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.title-text {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    z-index: 10;
+}
