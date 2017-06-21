@@ -93,8 +93,8 @@ jQuery(function () {
     }
   };
 
-document.addEventListener('mousemove', mousepointer, false);
-document.addEventListener('touchmove', mousepointer, false);
+  document.addEventListener('mousemove', mousepointer, false);
+  document.addEventListener('touchmove', mousepointer, false);
   // document.onmousemove = mousepointer;
 
   function mousepointer (event){
