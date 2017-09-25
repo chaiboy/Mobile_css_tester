@@ -1,0 +1,328 @@
+@charset "UTF-8";
+html {
+	width:100%;
+	height:100%;
+	background-color:#666;
+	padding:10px;
+	 /* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
+		 -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		         box-sizing: border-box;
+	}
+body {
+	overflow-y: auto;
+	padding:20px;
+	 /* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
+		 -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		         box-sizing: border-box;
+
+	border: 1px solid #444;
+		 -webkit-border-radius: 12px;
+		    -moz-border-radius: 12px;
+		         border-radius: 12px;
+
+
+	font-family: Verdana, Geneva, sans-serif;
+	color: #262626;
+
+
+
+	/* Safari 4 does not support an inset shadow */
+	-webkit-box-shadow:       0 1px 1px rgba(170,170,170,1);
+	/* Chrome 5 does, Safari 4 will ignore this declaration */
+	-webkit-box-shadow: inset 0 1px 1px rgba(170,170,170,1);
+	   -moz-box-shadow: inset 0 1px 1px rgba(170,170,170,1);
+		    box-shadow: inset 0 1px 1px rgba(170,170,170,1);
+
+
+    font-family: Arial, Helvetica, sans-serif;
+	color: #262626;
+	background-color: #666;
+}
+
+body.body_errors {
+	justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+h2,span {
+	display:none;
+    color: #ddd;
+    text-shadow: #333 1px -1px 1px;
+}
+
+.display span{
+	display:inline;
+	color:#99ccff;
+	text-shadow:none;
+	font-size: inherit;
+	font-weight: normal;
+}
+.display {
+	font-size: 1.2em;
+	color:#fff;
+	font-weight: bold;
+}
+
+span {font-size: inherit;}
+
+/****** INITIAL STYLES ******/
+
+
+.desktop{display:block;}
+
+
+
+@media only screen and (min-device-width: 768px)
+	and (max-device-width: 1024px) {
+	body {
+	  color: #444;
+	  background-color: #666;
+	}
+
+	.ipad{display:block;}
+	.desktop{display:none;}
+}
+
+@media only screen and (max-device-width: 480px) {
+	html{padding:10px}
+	body {
+		color:#444;
+		background-color:#666;
+	}
+	.iphone{display:block;}
+	.desktop{display:none;}
+	h1{
+		font-size:2.2em;
+		color: #000000;
+	}
+	h2{font-size:1.8em}
+	.display{font-size:1.8em}
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5) {
+	.iphone_ret_true{display:block;}
+}
+
+
+@media only screen and (orientation:landscape) {
+	.landscape{display:block;}
+}
+@media only screen and (orientation:portrait) {
+	.portrait{display:block;}
+
+}
+@media only screen and (min-width: 1281px) and (max-width: 1920px) {
+	.extreme{display:inline;}
+	body{
+		font-size: 24px;
+	}
+}
+@media only screen and (min-width: 961px) and (max-width: 1280px) {
+	.wide{display:inline;}
+	body{
+		font-size: 16px;
+	}
+}
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+	.full{display:inline;}
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+	.tablet{display:inline;}
+}
+@media only screen                        and (max-width: 320px) {
+	.mobile{display:inline;}
+	body{
+		font-size: 10px;
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio : 2)
+	and (orientation:portrait), only screen and (min-device-pixel-ratio : 2)
+	and (orientation:portrait) {
+	.iphone_ret_port{display:inline;}
+}
+
+.show{display:block;}
+.hide{display:none;}
+
+
+@media only screen
+ and (max-device-height: 1080px)
+ and (max-device-width: 1920px)
+ and (-webkit-device-pixel-ratio: 1) {
+ 	.p1080{display:inline;}
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+@media only screen
+ and (min-device-width: 320px)
+ and (max-device-width: 480px)
+ and (-webkit-device-pixel-ratio: 2) {
+ 	.iphone_4{display:inline;}
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-device-pixel-ratio: 2) {
+  	.iphone_5{display:inline;}
+}
+
+/* ----------- iPhone 6 ----------- */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-device-pixel-ratio: 2) {
+	.iphone_6{display:inline;}
+}
+
+
+/* ----------- iPhone 6+ ----------- */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-device-pixel-ratio: 3) {
+  	.iphone_6plus{display:inline;}
+}
+
+/* ----------- Galaxy S3 ----------- */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 2) {
+  	.s3 {display: block;}
+}
+
+/* ----------- Galaxy S4 ----------- */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3) {
+  	.s4 {display: block;}
+}
+
+/* ----------- Galaxy S5 ----------- */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3) {
+  	.s5 {display: block;}
+}
+
+/* ----------- HTC One ----------- */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3) {
+  	.htc {display: block;}
+}
+
+/* ----------- iPad mini ----------- */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+  	.ipad {display: inline;}
+}
+
+/* ----------- iPad 1 and 2 ----------- */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-device-pixel-ratio: 1) {
+	.ipad {display: inline;}
+	.ipad_1 {display: inline;}
+	.ipad_2 {display: inline;}
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-device-pixel-ratio: 2) {
+  	.ipad {display: inline;}
+  	.retina {display: inline;}
+  	.ipad_3 {display: inline;}
+  	body{font-size: 20px;}
+}
+
+/* ----------- Galaxy Tab 10.1 ----------- */
+@media
+  (min-device-width: 800px)
+  and (max-device-width: 1280px) {
+  	.galaxyTab {display: block;}
+}
+
+/* ----------- Asus Nexus 7 ----------- */
+@media screen
+  and (device-width: 601px)
+  and (device-height: 906px)
+  and (-webkit-device-pixel-ratio: 1.331) {
+  	.asus {display: inline;}
+}
+
+/* ----------- Kindle Fire HD 7" ----------- */
+@media only screen
+  and (min-device-width: 800px)
+  and (max-device-width: 1280px)
+  and (-webkit-device-pixel-ratio: 1.5) {
+  	.kindle7 {display: inline;}
+}
+
+/* ----------- Kindle Fire HD 8.9" ----------- */
+@media only screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-device-pixel-ratio: 1.5) {
+  	.kindle8 {display: inline;}
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (-webkit-min-device-pixel-ratio: 1)
+   and (-webkit-max-device-pixel-ratio: 1.5) {
+  	.nonretina {display: inline;}
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+  	.retina {display: inline;}
+}
+
+/* ----------- Apple Watch ----------- */
+@media
+  (max-device-width: 42mm)
+  and (min-device-width: 38mm) {
+  	.watch {display: block;}
+}
+
+/* ----------- Moto 360 Watch ----------- */
+@media
+  (max-device-width: 218px)
+  and (max-device-height: 281px) {
+  	.watch {display: block;}
+}
+
+
+.mousepointer {
+  height:0;
+  width:0;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: 1;
+
+}
+.mousex, .mousey {
+  display: block;
+  width: auto;
+  white-space: nowrap;
+  color: #ffcc00;
+  font-weight: normal;
+  font-size: .75em;
+}

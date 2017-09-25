@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-language" content="en-us">
+        <title>Media Tester</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link href="css/init.css" rel="stylesheet" type="text/css" />
+        <link href="css/css-global.css" rel="stylesheet" type="text/css" />
+        <link href="css/background.css" rel="stylesheet" type="text/css" />
+
+        <meta property="og:url"                content="http://www.chaiboy.com/share/" />
+        <meta property="og:type"               content="article" />
+        <meta property="og:title"              content="title metatag" />
+        <meta property="og:description"        content="description metatag" />
+        <meta property="og:image"              content="images/purple.png" />
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" integrity="sha256-ffw+9zwShMev88XNrDgS0hLIuJkDfXhgyLogod77mn8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </head>
+    <body>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId      : '130037837723820',
+            xfbml      : true,
+            version    : 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+        };
+        
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="mousepointer">
+         <span class="mousey">2</span>
+         <span class="mousex">1</span>
+    </div>
+    <div id="main_content" class="main_content">
+        <h1>SHARE IT</h1>
+        <h2 class="desktop">Desktop,
+            <span class="retina">retina,</span>
+            <span class="nonretina">non retina,</span>
+            <span class="extreme">extreme layout,</span>
+            <span class="wide">wide layout,</span>
+            <span class="full">full layout,</span>
+            <span class="tablet">tablet layout,</span>
+            <span class="mobile">mobile layout,</span>
+            <span class="p1080">1080p</span>
+        </h2>
+        <h2 class="laptop">Laptop,
+            <span class="retina">retina,</span>
+            <span class="nonretina">non retina,</span>
+            <span class="extreme">extreme layout,</span>
+            <span class="wide">wide layout,</span>
+            <span class="full">full layout,</span>
+            <span class="tablet">tablet layout,</span>
+            <span class="mobile">mobile layout,</span>
+            <span class="p1080">1080p</span>
+        </h2>
+        <h2 class="ipad">iPad
+            <span class="ipad_1">1,</span>
+            <span class="ipad_2">2,</span>
+            <span class="ipad_3">3,</span>
+            <span class="ipad_air">air,</span>
+            <span class="retina">Retina,</span>
+            <span class="nonretina">Non retina,</span>
+        </h2>
+        <h2 class="iphone">iPhone
+            <span class="iphone_4">4,</span>
+            <span class="iphone_5">5,</span>
+            <span class="iphone_6">6,</span>
+            <span class="iphone_6plus">6plus,</span>
+            <span class="retina">Retina,</span>
+            <span class="nonretina">Non retina,</span>
+        </h2>
+        <h2 class="watch">Apple watch</h2>
+        <h2 class="htc">htc</h2>
+        <h2 class="asus">asus</h2>
+        <h2 class="kindle7">kindle 7</h2>
+        <h2 class="kindle8">kindle 8</h2>
+        <h2 class="s3">s3</h2>
+        <h2 class="s4">s4</h2>
+        <h2 class="s5">s5</h2>
+
+        <h2 class="galaxyTab">Galaxy Tab 10.1</h2>
+        <h2 class="landscape">Landscape mode</h2>
+        <h2 class="portrait">Portrait mode</h2>
+        <p class="display">UserAgent: <span class="agent"></span></p>
+        <p class="display">Vendor: <span class="vendor"></span>, Version: <span class="version"></span></p>
+        <p class="display">Pixel ratio: <span class="pixel"></span></p>
+        <p class="display">screen height: <span class="scrhi"></span><span class="scrhipix"></span>, width: <span class="scrwi"></span><span class="scrwipix"></span></p>
+        <p class="display">window height: <span class="winhi"></span><span class="winhipix"></span>, width: <span class="winwi"></span><span class="winwipix"></span></p>
+        <p class="display">document height: <span class="dochi"></span><span class="dochipix"></span>, width: <span class="docwi"></span><span class="docwipix"></span></p>
+        <p class="display">Modernzr Classes: <span class="modernzr_classes_list"></span></p>
+
+        <div class="photo-frame">
+            <div class="title-text">Image by Kohei314</div>
+            <img role="img" src="images/blank.png" aria-label="a forest" alt="a forest" class="photo">
+        </div>
+        <div
+        class="fb-like"
+        data-share="true"
+        data-width="450"
+        data-show-faces="true">
+      </div>
+    </div>
+    </body>
+</html>

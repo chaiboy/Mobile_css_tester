@@ -1,0 +1,41 @@
+
+RewriteEngine On 
+RewriteCond %{HTTP_HOST} ^chaiboy\.com [NC]
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.chaiboy.com/$1 [R,L]
+
+# Set secure headers
+<ifModule mod_headers.c>
+
+	# prevent code from running from the page. Setting which sites can run code on this site.
+	Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: code.jquery.com www.google-analytics.com *.cloudflare.com *.hotjar.com;"
+
+	# make sure browser is only talking to site through https.
+	Header set Strict-Transport-Security "max-age=631138519; includeSubDomains"
+
+	# block this page being shown in an iframe
+	Header set X-Frame-Options DENY
+
+	# stop sniffing of content tyes
+	Header set X-Content-Type-Options nosniff
+	
+</ifModule>
+
+# custom error result pages
+ErrorDocument 400 /errors/400.html
+ErrorDocument 401 /errors/401.html
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html
+ErrorDocument 500 /errors/500.html
+
+# don't index the directory if there aren't any files
+
+Options -Indexes
+
+
+# compress files on way to browser
+
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4.0[678] no-gzip
+BrowserMatch bMSIE !no-gzip !gzip-only-text/html
