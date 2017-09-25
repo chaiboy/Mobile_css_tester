@@ -21,6 +21,7 @@
         <script type="text/javascript" src="js/scripts.js"></script>
     </head>
     <body>
+    <script type="text/javascript" src="js/oauth.min.js"></script>
     <script>
         window.fbAsyncInit = function() {
             FB.init({
@@ -30,7 +31,7 @@
             });
             FB.AppEvents.logPageView();
         };
-        
+
         (function(d, s, id){
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) {return;}
@@ -38,6 +39,146 @@
             js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
+
+            jQuery(function() {
+			function twitterLink($el, event) {
+				let mediaUploadBlob = '';
+
+				console.log('clicked twitter button');
+
+				const data = $el.data(),
+				    color = jQuery('#twitter-share').attr('item-color'),
+					description = 'Image is ' + color + ' in color.',
+					link = 'https://twitter.com/intent/tweet?' +
+						'url=https%3A%2F%2Fchaiboy.com%2Fshare&text=' + description + '&counturl=https%3A%2F%2Fchaiboy.com%2Fshare',
+					leftPos = event.pageX - 400,
+					topPos = event.pageY - 350,
+					settings = 'width=500,height=300' +
+						',top=' + topPos +
+						',left=' + leftPos +
+						',scrollbars=no,location=0,statusbars=0,menubars=0,toolbars=0,resizable=0';
+				console.log(data);	
+				
+
+				toDataURL(itemColorPicture(color), function(dataUrl) {
+				console.log('RESULT:', dataUrl);
+				mediaUploadBlob = dataUrl;
+				})
+				// fetch(itemColorPicture(color))
+				// 	.then(function(response) {return response.blob();})
+				// 	.then(function(myBlob) {
+				// 		mediaUploadBlob = myBlob;
+				// 		console.log(mediaUploadBlob);
+				// 	});
+
+				OAuth.initialize('zh3nyi3FttPhGsZBnCQAePg98');
+
+				OAuth.popup('twitter')
+				.done(function (result) {
+
+				result.post('https://upload.twitter.com/1.1/media/upload.json', {
+					data: {
+					media_data: mediaUploadBlob //base64-encoded string
+					}
+				})
+					.done(function (response) {
+					//this will display the id of the message in the console
+					console.log(response);
+					OAuth.popup('twitter')
+						.done(function (result) {
+
+
+						result.post('https://api.twitter.com/1.1/statuses/update.json', {
+							data: {
+							status: description,
+							media_ids: response.media_id
+							}
+						})
+							.done(function (response) {
+							//this will display the id of the message in the console
+							console.log(response);
+							})
+							.fail(function (err) {
+							//handle error with err
+							});
+						})
+						.fail(function (err) {
+						//handle error with err
+						});
+					})
+					.fail(function (err) {
+					//handle error with err
+					});
+				})
+				.fail(function (err) {
+				//handle error with err
+				});
+
+
+
+
+				// window.open(link, 'Tweet', settings);
+			}
+
+			function toDataURL(url, callback) {
+				var xhr = new XMLHttpRequest();
+				xhr.onload = function() {
+					var reader = new FileReader();
+					reader.onloadend = function() {
+					callback(reader.result);
+					}
+					reader.readAsDataURL(xhr.response);
+				};
+				xhr.open('GET', url);
+				xhr.responseType = 'blob';
+				xhr.send();
+			}
+
+			function itemColorPicture(color){
+				switch (color) {
+					case 'red':
+						return "images/red.jpg";
+						break;
+					case 'purple':
+						return "images/purple.jpg";
+						break;
+					case 'green':
+						return "images/green.jpg";
+						break;
+					case 'blue':
+						return "images/blue.jpg";
+						break;
+					default:
+						break;
+				}
+			}
+
+			function facebookLink(object) {
+				const color = jQuery('#facebook-share').attr('item-color'),
+					obj = {
+						method:'feed',
+						link: 'https://www.chaiboy.com/share/',
+						picture: itemColorPicture(color),
+						name: color + ' color',
+						caption:'Image is a ' + color + ' color',
+						description: 'image should be ' + color + ' in color.'
+					};
+				FB.ui(obj, function(){});
+			}
+
+			// facebook
+			jQuery('#facebook-share').on('click', function(event) {
+				event.preventDefault();
+				facebookLink(jQuery(this));
+			});
+
+			// twitter
+			jQuery('#twitter-share').on('click', function(event) {
+				event.preventDefault();
+				twitterLink(jQuery(this), event);
+			});
+			fbInit();
+		});
     </script>
     <div class="mousepointer">
          <span class="mousey">2</span>
@@ -110,6 +251,8 @@
         data-share="true"
         data-width="450"
         data-show-faces="true">
+        <a id="facebook-share" item-color=""></a>
+        <a id="twitter-share" item-color=""></a>
       </div>
     </div>
     </body>
