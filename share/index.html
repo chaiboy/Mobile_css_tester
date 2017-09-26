@@ -23,7 +23,7 @@
     <body>
     <script type="text/javascript" src="js/oauth.min.js"></script>
     <script>
-		console.log('version 0.1.8');
+		console.log('version 0.2');
             jQuery(function() {
 			function twitterLink($el, event) {
 				trace('twitter link called');
@@ -76,7 +76,7 @@
 							result.post('https://api.twitter.com/1.1/statuses/update.json', {
 								'data': {
 									'status': description,
-									'media_ids': response.media_id
+									'media_ids': response.media_id_string
 								}
 							})
 							.done(function (response) {
