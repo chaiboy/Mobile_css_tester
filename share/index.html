@@ -83,20 +83,20 @@
 				})
 					.done(function (response) {
 					//this will display the id of the message in the console
-					console.log(response);
+					console.log('response:', response);
 					OAuth.popup('twitter')
 						.done(function (result) {
+							console.log('result:', result);
 
-
-						result.post('https://api.twitter.com/1.1/statuses/update.json', {
-							data: {
-							status: description,
-							media_ids: response.media_id
-							}
-						})
+							result.post('https://api.twitter.com/1.1/statuses/update.json', {
+								data: {
+								status: description,
+								media_ids: response.media_id
+								}
+							})
 							.done(function (response) {
 							//this will display the id of the message in the console
-							console.log(response);
+							console.log('response id:', response);
 							})
 							.fail(function (err) {
 							//handle error with err
