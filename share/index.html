@@ -42,6 +42,7 @@
 
             jQuery(function() {
 			function twitterLink($el, event) {
+				trace('twitter link called');
 				let mediaUploadBlob = '';
 
 				console.log('clicked twitter button');
@@ -75,7 +76,6 @@
 
 				OAuth.popup('twitter')
 				.done(function (result) {
-
 				result.post('https://upload.twitter.com/1.1/media/upload.json', {
 					data: {
 					media_data: mediaUploadBlob //base64-encoded string
@@ -137,16 +137,16 @@
 			function itemColorPicture(color){
 				switch (color) {
 					case 'red':
-						return "images/red.png";
+						return "/share/images/red.png";
 						break;
 					case 'purple':
-						return "images/purple.png";
+						return "/share/images/purple.png";
 						break;
 					case 'green':
-						return "images/green.png";
+						return "/share/images/green.png";
 						break;
 					case 'blue':
-						return "images/blue.png";
+						return "/share/images/blue.png";
 						break;
 					default:
 						break;
@@ -154,6 +154,7 @@
 			}
 
 			function facebookLink(object) {
+				trace('facebook link');
 				const color = jQuery('#facebook-share').attr('item-color'),
 					obj = {
 						method:'feed',
@@ -177,7 +178,7 @@
 				event.preventDefault();
 				twitterLink(jQuery(this), event);
 			});
-			
+
 		});
     </script>
     <div class="mousepointer">

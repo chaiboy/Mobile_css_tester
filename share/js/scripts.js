@@ -17,7 +17,7 @@ jQuery(function () {
       if (window.devicePixelRatio) {
         pixelaspect = window.devicePixelRatio;
       }
-      trace('pixelaspect: ' + pixelaspect);
+      // trace('pixelaspect: ' + pixelaspect);
       return pixelaspect;
     },
     getUserAgent: function () {
@@ -55,7 +55,7 @@ jQuery(function () {
       return dimension * ratio;
     },
     display: function () {
-      trace('display called' + browserStats.getPixelRatio());
+      // trace('display called' + browserStats.getPixelRatio());
 
       jQuery('.pixel').html(browserStats.getPixelRatio());
       jQuery('.scrhi').html(browserStats.getScreenHeight());
@@ -89,7 +89,7 @@ jQuery(function () {
       jQuery('.version').html(browserStats.getAppVersion());
       jQuery('.vendor').html(browserStats.getVendor());
       jQuery('.agent').html(browserStats.getUserAgent());
-      trace('display rendered');
+      // trace('display rendered');
     }
   };
 
