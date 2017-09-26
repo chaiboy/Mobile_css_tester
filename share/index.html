@@ -77,8 +77,8 @@
 				OAuth.popup('twitter')
 				.done(function (result) {
 				result.post('https://upload.twitter.com/1.1/media/upload.json', {
-					data: {
-					media_data: mediaUploadBlob //base64-encoded string
+					'data': {
+						'media_data': mediaUploadBlob
 					}
 				})
 					.done(function (response) {
@@ -89,9 +89,9 @@
 							console.log('result:', result);
 
 							result.post('https://api.twitter.com/1.1/statuses/update.json', {
-								data: {
-								status: description,
-								media_ids: response.media_id
+								'data': {
+									'status': description,
+									'media_ids': response.media_id
 								}
 							})
 							.done(function (response) {
