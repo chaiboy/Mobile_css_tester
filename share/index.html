@@ -23,6 +23,7 @@
     <body>
     <script type="text/javascript" src="js/oauth.min.js"></script>
     <script>
+		console.log('version 0.1.0');
         window.fbAsyncInit = function() {
             FB.init({
             appId      : '130037837723820',
@@ -45,25 +46,26 @@
 				trace('twitter link called');
 				let mediaUploadBlob = '';
 
-				console.log('clicked twitter button');
+				// console.log('clicked twitter button');
 
-				const data = $el.data(),
-				    color = jQuery('#twitter-share').attr('item-color'),
-					description = 'Image is ' + color + ' in color.',
-					link = 'https://twitter.com/intent/tweet?' +
-						'url=https%3A%2F%2Fchaiboy.com%2Fshare&text=' + description + '&counturl=https%3A%2F%2Fchaiboy.com%2Fshare',
-					leftPos = event.pageX - 400,
-					topPos = event.pageY - 350,
-					settings = 'width=500,height=300' +
-						',top=' + topPos +
-						',left=' + leftPos +
-						',scrollbars=no,location=0,statusbars=0,menubars=0,toolbars=0,resizable=0';
-				console.log(data);	
+				// const data = $el.data(),
+				//     color = jQuery('#twitter-share').attr('item-color'),
+				// 	description = 'Image is ' + color + ' in color.',
+				// 	link = 'https://twitter.com/intent/tweet?' +
+				// 		'url=https%3A%2F%2Fchaiboy.com%2Fshare&text=' + description + '&counturl=https%3A%2F%2Fchaiboy.com%2Fshare',
+				// 	leftPos = event.pageX - 400,
+				// 	topPos = event.pageY - 350,
+				// 	settings = 'width=500,height=300' +
+				// 		',top=' + topPos +
+				// 		',left=' + leftPos +
+				// 		',scrollbars=no,location=0,statusbars=0,menubars=0,toolbars=0,resizable=0';
+				// console.log(data);
 				
 
 				toDataURL(itemColorPicture(color), function(dataUrl) {
-				console.log('RESULT:', dataUrl);
+
 				mediaUploadBlob = dataUrl;
+				console.log('RESULT:', dataUrl);
 				})
 				// fetch(itemColorPicture(color))
 				// 	.then(function(response) {return response.blob();})
