@@ -33,7 +33,7 @@
 
 				const data = $el.data(),
 				    color = jQuery('#twitter-share').attr('item-color'),
-					description = 'Image is ' + color + ' in color.',
+					description = 'Image is ' + color + ' in color. link at https://www.google.com',
 					link = 'https://twitter.com/intent/tweet?' +
 						'url=https%3A%2F%2Fchaiboy.com%2Fshare&text=' + description + '&counturl=https%3A%2F%2Fchaiboy.com%2Fshare',
 					leftPos = event.pageX - 400,
@@ -57,6 +57,18 @@
 				// 		console.log(mediaUploadBlob);
 				// 	});
 
+				/**
+				 * 1. init =  POST https://upload.twitter.com/1.1/media/upload.json?command=INIT&total_bytes=10240&media_type=image/jpeg
+				 *    this returns the media_id
+				 * 2. append  POST https://upload.twitter.com/1.1/media/upload.json?command=APPEND&media_id=123&segment_index=2&media_data=123
+				 *    this uploads the file
+				 * 2a. status GET https://upload.twitter.com/1.1/media/upload.json?command=STATUS&media_id=710511363345354753
+				 *    this returns success when the upload finishes
+				 * 3. POST  https://upload.twitter.com/1.1/media/upload.json?command=FINALIZE&media_id=710511363345354753
+				 *    finalizes post
+				 * 4. POST https://api.twitter.com/1.1/statuses/update.json?status=Maybe%20he%27ll%20finally%20find%20his%20keys.%20%23peterfalk&media_ids=912739095738146816
+				*/
+
 				OAuth.initialize('QqTm4mTTcVxsyl2vdG-rrBQzi2U');
 
 				OAuth.popup('twitter')
@@ -72,7 +84,6 @@
 					OAuth.popup('twitter')
 						.done(function (result) {
 							console.log('result:', result);
-
 							result.post('https://api.twitter.com/1.1/statuses/update.json', {
 								'data': {
 									'status': description,
@@ -80,8 +91,8 @@
 								}
 							})
 							.done(function (response) {
-							//this will display the id of the message in the console
-							console.log('response id:', response);
+								//this will display the id of the message in the console
+								console.log('response id:', response);
 							})
 							.fail(function (err) {
 							//handle error with err
