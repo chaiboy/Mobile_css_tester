@@ -1,6 +1,8 @@
 Mobile_css_tester
 =================
 
+Updated to ES6.
+
 This is a personal tester for mobile media and html5 features.
 
 I use this to detect mobile devices using media queries and to try out various code before moving bits of it to a live site. 
