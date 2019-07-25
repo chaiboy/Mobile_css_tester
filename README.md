@@ -1,6 +1,11 @@
 Mobile_css_tester
 =================
 
+[![star this repo](http://githubbadges.com/star.svg?user=jasonmcalpin&repo=Mobile_css_tester
+&style=default)](https://github.com/jasonmcalpin/node_starter)
+[![fork this repo](http://githubbadges.com/fork.svg?user=jasonmcalpin&repo=Mobile_css_tester
+&style=default)](https://github.com/jasonmcalpin/node_starter/fork)
+
 Updated to ES6.
 
 This is a personal tester for mobile media and html5 features.
